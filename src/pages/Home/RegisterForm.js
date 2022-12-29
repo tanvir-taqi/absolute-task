@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useLocation, useNavigate } from 'react-router-dom';
+import LoadingSpinner from '../../components/LoadingSpinner';
 import { AuthContext } from '../../userContext/UserContext';
 
 const RegisterForm = ({setLoginForm}) => {
@@ -91,9 +92,9 @@ const RegisterForm = ({setLoginForm}) => {
     })
 
 
-    // if (loading) {
-    //     return <LoadingSpinner></LoadingSpinner>
-    // }
+    if (loading) {
+        return <LoadingSpinner></LoadingSpinner>
+    }
     return (
         <div className=" py-32 w-full flex justify-center">
             <div className='p-10 bg-cyan-200 w-96'>

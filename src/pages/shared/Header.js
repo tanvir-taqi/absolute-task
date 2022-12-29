@@ -26,9 +26,8 @@ const Header = () => {
 
                     {/* header logo and name  */}
 
-                    <Link to='/' className={`font-bold flex  text-lg md:text-3xl`}>
-                        <h1 className={`text-[#0c141f] `}>Absolute Tasks</h1>
-                    </Link>
+                        <h1 className={`text-[#0c141f] font-bold   text-lg md:text-3xl`}>Absolute Tasks</h1>
+                   
 
                     <button className='block md:hidden' onClick={() => setDisplay(!display)}><BiAlignMiddle></BiAlignMiddle></button>
                 </div>

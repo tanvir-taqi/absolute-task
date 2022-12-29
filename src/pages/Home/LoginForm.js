@@ -3,6 +3,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../userContext/UserContext';
 import { FaEye, FaEyeSlash, FaGoogle } from "react-icons/fa";
+import LoadingSpinner from '../../components/LoadingSpinner';
 
 const LoginForm = ({setLoginForm}) => {
     const { login, setLoading, loading, socialLogin } = useContext(AuthContext);
@@ -74,10 +75,10 @@ const LoginForm = ({setLoginForm}) => {
         window.scrollTo(0, 0);
     })
 
-    // if (loading) {
-    //     return <LoadingSpinner></LoadingSpinner>
+    if (loading) {
+        return <LoadingSpinner></LoadingSpinner>
 
-    // }
+    }
 
     return (
         <div className=" py-32 w-full flex justify-center">
