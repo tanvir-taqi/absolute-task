@@ -1,0 +1,106 @@
+[debug] [2022-12-30T12:25:02.360Z] ----------------------------------------------------------------------
+[debug] [2022-12-30T12:25:02.362Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\wc\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-12-30T12:25:02.362Z] CLI Version:   11.15.0
+[debug] [2022-12-30T12:25:02.363Z] Platform:      win32
+[debug] [2022-12-30T12:25:02.363Z] Node Version:  v16.18.0
+[debug] [2022-12-30T12:25:02.368Z] Time:          Fri Dec 30 2022 18:25:02 GMT+0600 (Bangladesh Standard Time)
+[debug] [2022-12-30T12:25:02.369Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-12-30T12:25:02.373Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2022-12-30T12:25:02.468Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-12-30T12:25:02.468Z] > authorizing via signed-in user (taqit3852@gmail.com)
+[debug] [2022-12-30T12:25:02.468Z] [iam] checking project absolute-t for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-12-30T12:25:02.470Z] > refreshing access token with scopes: []
+[debug] [2022-12-30T12:25:02.471Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2022-12-30T12:25:02.471Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-12-30T12:25:03.123Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2022-12-30T12:25:03.124Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-12-30T12:25:03.132Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/absolute-t:testIamPermissions [none]
+[debug] [2022-12-30T12:25:03.132Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/absolute-t:testIamPermissions x-goog-quota-user=projects/absolute-t
+[debug] [2022-12-30T12:25:03.133Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/absolute-t:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-12-30T12:25:04.430Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/absolute-t:testIamPermissions 200
+[debug] [2022-12-30T12:25:04.430Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/absolute-t:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-12-30T12:25:04.432Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/absolute-t [none]
+[debug] [2022-12-30T12:25:06.966Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/absolute-t 200
+[debug] [2022-12-30T12:25:06.966Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/absolute-t {"projectId":"absolute-t","projectNumber":"376277627331","displayName":"absolute-t","name":"projects/absolute-t","resources":{"hostingSite":"absolute-t"},"state":"ACTIVE","etag":"1_643f9691-b3d9-42fe-923a-451e4a4dc6b7"}
+[info] 
+[info] === Deploying to 'absolute-t'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2022-12-30T12:25:06.974Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/absolute-t/versions [none]
+[debug] [2022-12-30T12:25:06.974Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/absolute-t/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2022-12-30T12:25:08.816Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/absolute-t/versions 200
+[debug] [2022-12-30T12:25:08.816Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/absolute-t/versions {"name":"projects/376277627331/sites/absolute-t/versions/3d1f5aabed197187","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[absolute-t]: beginning deploy... 
+[info] i  hosting[absolute-t]: found 15 files in build 
+[debug] [2022-12-30T12:25:08.828Z] [hosting] uploading with 200 concurrency
+[debug] [2022-12-30T12:25:09.232Z] [hosting] hash cache [YnVpbGQ] stored for 15 files
+[debug] [2022-12-30T12:25:09.232Z] [hosting][hash queue][FINAL] {"max":396,"min":2,"avg":32.6,"active":0,"complete":15,"success":15,"errored":0,"retried":0,"total":15,"elapsed":401}
+[debug] [2022-12-30T12:25:09.233Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/376277627331/sites/absolute-t/versions/3d1f5aabed197187:populateFiles [none]
+[debug] [2022-12-30T12:25:09.233Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/376277627331/sites/absolute-t/versions/3d1f5aabed197187:populateFiles {"files":{"/favicon.ico":"c6a63a2f5af6c9ca13f078cd1849aff054e2874bdde714cfce981f287c8ecdf4","/logo192.png":"3ee59515172ee198f3be375979df15ac5345183e656720a381b8872b2a39dc8b","/logo512.png":"ee7e2f3fdb8209c4b6fd7bef6ba50d1b9dba30a25bb5c3126df057e1cb6f5331","/manifest.json":"5c997de1364b8be939319fa9209abd77f2caf7f8844999a9e2e9173f844e7840","/robots.txt":"b2090cf9761ef60aa06e4fab97679bd43dfa5e5df073701ead5879d7c68f1ec5","/task.png":"44714e3845edc44e3df32636cb09af6ed46833789ce52512dd61afd92882e290","/asset-manifest.json":"a7aa9587c67396d6bee351945c101f801cfde25683e1389af0841fd27aed7716","/index.html":"e70bb8f5feffd858633e1d1cbfe29e7eb772fff2d611308012c041e2d2d5fdf8","/static/css/main.edb6f4b9.css":"9c2970135264b9a5045cca1c4e833004570a34930b83209d1b164b0ddd0c52df","/static/js/787.7cb4a60c.chunk.js":"73e3c2897d92e2f2418cfee9455eea55a2b877e5506f7aae511cda0b91783055","/static/css/main.edb6f4b9.css.map":"78d319a54defb266f0aef23a7dbdfa51a7b71a517dcf5526be48f2d5a5483bd8","/static/js/main.06d08b64.js.LICENSE.txt":"d3984d5f452513f31d8cbe5f09f7ac50332c6e640d79a86844769fb804725927","/static/js/787.7cb4a60c.chunk.js.map":"2bf0555bb717748c56b433ee6a2072ad1bf1857bd4d50fc0f38f0a0367710a12","/static/js/main.06d08b64.js":"ef8c9fa8ae4e88be122dcab212e9659225cf1eb54015028db094488f27b9811b","/static/js/main.06d08b64.js.map":"20dab8cbe50f5d3f9cc05359a5db2cae9d8e9cfab22f570b22754f9dfc9bae16"}}
+[debug] [2022-12-30T12:25:10.439Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/376277627331/sites/absolute-t/versions/3d1f5aabed197187:populateFiles 200
+[debug] [2022-12-30T12:25:10.439Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/376277627331/sites/absolute-t/versions/3d1f5aabed197187:populateFiles {"uploadRequiredHashes":["20dab8cbe50f5d3f9cc05359a5db2cae9d8e9cfab22f570b22754f9dfc9bae16","a7aa9587c67396d6bee351945c101f801cfde25683e1389af0841fd27aed7716","e70bb8f5feffd858633e1d1cbfe29e7eb772fff2d611308012c041e2d2d5fdf8","78d319a54defb266f0aef23a7dbdfa51a7b71a517dcf5526be48f2d5a5483bd8","9c2970135264b9a5045cca1c4e833004570a34930b83209d1b164b0ddd0c52df","ef8c9fa8ae4e88be122dcab212e9659225cf1eb54015028db094488f27b9811b"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/absolute-t/versions/3d1f5aabed197187/files"}
+[debug] [2022-12-30T12:25:10.441Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/absolute-t/versions/3d1f5aabed197187/files/20dab8cbe50f5d3f9cc05359a5db2cae9d8e9cfab22f570b22754f9dfc9bae16 [none]
+[debug] [2022-12-30T12:25:10.441Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/absolute-t/versions/3d1f5aabed197187/files/20dab8cbe50f5d3f9cc05359a5db2cae9d8e9cfab22f570b22754f9dfc9bae16 [stream]
+[debug] [2022-12-30T12:25:10.442Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/absolute-t/versions/3d1f5aabed197187/files/a7aa9587c67396d6bee351945c101f801cfde25683e1389af0841fd27aed7716 [none]
+[debug] [2022-12-30T12:25:10.442Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/absolute-t/versions/3d1f5aabed197187/files/a7aa9587c67396d6bee351945c101f801cfde25683e1389af0841fd27aed7716 [stream]
+[debug] [2022-12-30T12:25:10.443Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/absolute-t/versions/3d1f5aabed197187/files/e70bb8f5feffd858633e1d1cbfe29e7eb772fff2d611308012c041e2d2d5fdf8 [none]
+[debug] [2022-12-30T12:25:10.443Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/absolute-t/versions/3d1f5aabed197187/files/e70bb8f5feffd858633e1d1cbfe29e7eb772fff2d611308012c041e2d2d5fdf8 [stream]
+[debug] [2022-12-30T12:25:10.444Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/absolute-t/versions/3d1f5aabed197187/files/78d319a54defb266f0aef23a7dbdfa51a7b71a517dcf5526be48f2d5a5483bd8 [none]
+[debug] [2022-12-30T12:25:10.444Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/absolute-t/versions/3d1f5aabed197187/files/78d319a54defb266f0aef23a7dbdfa51a7b71a517dcf5526be48f2d5a5483bd8 [stream]
+[debug] [2022-12-30T12:25:10.445Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/absolute-t/versions/3d1f5aabed197187/files/9c2970135264b9a5045cca1c4e833004570a34930b83209d1b164b0ddd0c52df [none]
+[debug] [2022-12-30T12:25:10.445Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/absolute-t/versions/3d1f5aabed197187/files/9c2970135264b9a5045cca1c4e833004570a34930b83209d1b164b0ddd0c52df [stream]
+[debug] [2022-12-30T12:25:10.446Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/absolute-t/versions/3d1f5aabed197187/files/ef8c9fa8ae4e88be122dcab212e9659225cf1eb54015028db094488f27b9811b [none]
+[debug] [2022-12-30T12:25:10.446Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/absolute-t/versions/3d1f5aabed197187/files/ef8c9fa8ae4e88be122dcab212e9659225cf1eb54015028db094488f27b9811b [stream]
+[debug] [2022-12-30T12:25:10.447Z] [hosting][populate queue][FINAL] {"max":1210,"min":1210,"avg":1210,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1216}
+[debug] [2022-12-30T12:25:10.447Z] [hosting] uploads queued: 6
+[debug] [2022-12-30T12:25:13.766Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/absolute-t/versions/3d1f5aabed197187/files/78d319a54defb266f0aef23a7dbdfa51a7b71a517dcf5526be48f2d5a5483bd8 200
+[debug] [2022-12-30T12:25:13.766Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/absolute-t/versions/3d1f5aabed197187/files/78d319a54defb266f0aef23a7dbdfa51a7b71a517dcf5526be48f2d5a5483bd8 [stream]
+[debug] [2022-12-30T12:25:13.767Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/absolute-t/versions/3d1f5aabed197187/files/a7aa9587c67396d6bee351945c101f801cfde25683e1389af0841fd27aed7716 200
+[debug] [2022-12-30T12:25:13.767Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/absolute-t/versions/3d1f5aabed197187/files/a7aa9587c67396d6bee351945c101f801cfde25683e1389af0841fd27aed7716 [stream]
+[debug] [2022-12-30T12:25:14.645Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/absolute-t/versions/3d1f5aabed197187/files/ef8c9fa8ae4e88be122dcab212e9659225cf1eb54015028db094488f27b9811b 200
+[debug] [2022-12-30T12:25:14.645Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/absolute-t/versions/3d1f5aabed197187/files/ef8c9fa8ae4e88be122dcab212e9659225cf1eb54015028db094488f27b9811b [stream]
+[debug] [2022-12-30T12:25:17.827Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/absolute-t/versions/3d1f5aabed197187/files/20dab8cbe50f5d3f9cc05359a5db2cae9d8e9cfab22f570b22754f9dfc9bae16 200
+[debug] [2022-12-30T12:25:17.828Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/absolute-t/versions/3d1f5aabed197187/files/20dab8cbe50f5d3f9cc05359a5db2cae9d8e9cfab22f570b22754f9dfc9bae16 [stream]
+[debug] [2022-12-30T12:25:26.399Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/absolute-t/versions/3d1f5aabed197187/files/9c2970135264b9a5045cca1c4e833004570a34930b83209d1b164b0ddd0c52df 200
+[debug] [2022-12-30T12:25:26.399Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/absolute-t/versions/3d1f5aabed197187/files/9c2970135264b9a5045cca1c4e833004570a34930b83209d1b164b0ddd0c52df [stream]
+[debug] [2022-12-30T12:25:40.856Z] [uploadQueue] Retrying task e70bb8f5feffd858633e1d1cbfe29e7eb772fff2d611308012c041e2d2d5fdf8
+[debug] [2022-12-30T12:25:40.857Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/absolute-t/versions/3d1f5aabed197187/files/e70bb8f5feffd858633e1d1cbfe29e7eb772fff2d611308012c041e2d2d5fdf8 [none]
+[debug] [2022-12-30T12:25:40.857Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/absolute-t/versions/3d1f5aabed197187/files/e70bb8f5feffd858633e1d1cbfe29e7eb772fff2d611308012c041e2d2d5fdf8 [stream]
+[debug] [2022-12-30T12:25:45.407Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/absolute-t/versions/3d1f5aabed197187/files/e70bb8f5feffd858633e1d1cbfe29e7eb772fff2d611308012c041e2d2d5fdf8 200
+[debug] [2022-12-30T12:25:45.407Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/absolute-t/versions/3d1f5aabed197187/files/e70bb8f5feffd858633e1d1cbfe29e7eb772fff2d611308012c041e2d2d5fdf8 [stream]
+[debug] [2022-12-30T12:25:45.408Z] [hosting][upload queue][FINAL] {"max":15958,"min":3326,"avg":6459.166666666667,"active":0,"complete":6,"success":6,"errored":0,"retried":1,"total":6,"elapsed":34968}
+[info] +  hosting[absolute-t]: file upload complete 
+[debug] [2022-12-30T12:25:45.410Z] [hosting] deploy completed after 36592ms
+[debug] [2022-12-30T12:25:45.412Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "absolute-t"
+    },
+    "version": "projects/376277627331/sites/absolute-t/versions/3d1f5aabed197187"
+  }
+]
+[info] i  hosting[absolute-t]: finalizing version... 
+[debug] [2022-12-30T12:25:45.415Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/absolute-t/versions/3d1f5aabed197187 updateMask=status%2Cconfig
+[debug] [2022-12-30T12:25:45.415Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/absolute-t/versions/3d1f5aabed197187 {"status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]}}
+[debug] [2022-12-30T12:25:46.829Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/absolute-t/versions/3d1f5aabed197187 200
+[debug] [2022-12-30T12:25:46.830Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/absolute-t/versions/3d1f5aabed197187 {"name":"projects/376277627331/sites/absolute-t/versions/3d1f5aabed197187","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2022-12-30T12:26:29.559081Z","createUser":{"email":"taqit3852@gmail.com"},"finalizeTime":"2022-12-30T12:27:08.198569Z","finalizeUser":{"email":"taqit3852@gmail.com"}}
+[debug] [2022-12-30T12:25:46.830Z] [hosting] finalized version for absolute-t:[object Object]
+[info] +  hosting[absolute-t]: version finalized 
+[info] i  hosting[absolute-t]: releasing new version... 
+[debug] [2022-12-30T12:25:46.832Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/absolute-t/channels/live/releases versionName=projects%2F376277627331%2Fsites%2Fabsolute-t%2Fversions%2F3d1f5aabed197187
+[debug] [2022-12-30T12:25:46.832Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/absolute-t/channels/live/releases {}
+[debug] [2022-12-30T12:25:54.283Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2022-12-30T12:25:54.283Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}

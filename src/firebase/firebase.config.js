@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyC3SLA0pt9H_p9MovaoWbCH22rAbD2h0xc",
-  authDomain: "absolute-task.firebaseapp.com",
-  projectId: "absolute-task",
-  storageBucket: "absolute-task.appspot.com",
-  messagingSenderId: "1081394857139",
-  appId: "1:1081394857139:web:cb4c9652870808bf409cc6"
+  apiKey: "AIzaSyA42zKeODO5UFkOqrUNYeB8RgIN98QWJvc",
+  authDomain: "absolute-t.firebaseapp.com",
+  projectId: "absolute-t",
+  storageBucket: "absolute-t.appspot.com",
+  messagingSenderId: "376277627331",
+  appId: "1:376277627331:web:21254b336a739d03130d76"
 };
 
 // Initialize Firebase

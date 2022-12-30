@@ -67,7 +67,7 @@ const SingleCompletedMyTask = ({ task, handleCompleteTask ,handleDeleteTask}) =>
                     {
                         viewInput && <div className={`p-4 my-2 border border-black  w-full flex flex-col items-center justify-between`}>
                             <form onSubmit={addComments} className={`p-4 w-full flex flex-col`}>
-                                <textarea name="comment" id="comment" cols="30" rows="3" className='p-3' ></textarea>
+                                <textarea name="comment" id="comment" cols="30" rows="3" className='p-3 text-black' ></textarea>
                                 <input type="submit" value="Add Comment" className={`font-semibold text-lg py-2 px-4 my-4 cursor-pointer rounded  ${theme ? "bg-[#bbe3e7] ": "  bg-[#0c141f]"}`} />
                             </form>
 

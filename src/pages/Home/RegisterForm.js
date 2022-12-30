@@ -109,7 +109,7 @@ const RegisterForm = ({setLoginForm}) => {
                         <label className="label"> <span className="label-text">Name</span></label>
                         <input type="text" {...register("name", {
                             required: "Name is Required"
-                        })} className="input input-bordered w-full max-w-xs" />
+                        })} className="input input-bordered w-full p-2 text-black" />
                         {errors.name && <p className='text-red-500'>{errors.name.message}</p>}
                     </div>
 
@@ -118,7 +118,7 @@ const RegisterForm = ({setLoginForm}) => {
                         <label className="label"> <span className="label-text">Email</span></label>
                         <input type="email" {...register("email", {
                             required: true
-                        })} className="input input-bordered w-full max-w-xs" />
+                        })} className="input input-bordered w-full p-2 text-black" />
                         {errors.email && <p className='text-red-500'>{errors.email.message}</p>}
                     </div>
 
@@ -126,7 +126,7 @@ const RegisterForm = ({setLoginForm}) => {
                         <label className="label"> <span className="label-text">Photo</span></label>
                         <input type="file" {...register("img", {
                             required: "Image is Required"
-                        })} className=" w-full max-w-xs" />
+                        })} className=" w-full p-2 " />
                         {errors.img && <p className='text-red-500'>{errors.img.message}</p>}
                     </div>
 
@@ -135,7 +135,7 @@ const RegisterForm = ({setLoginForm}) => {
                         <label className="label"> <span className="label-text">Password</span></label>
                         <input type="password" {...register("password", {
                             required: true
-                        })} className="input input-bordered w-full max-w-xs" />
+                        })} className="input input-bordered p-2 w-full text-black" />
                         {errors.email && <p className='text-red-500'>{errors.email.message}</p>}
                     </div>
 
@@ -144,7 +144,7 @@ const RegisterForm = ({setLoginForm}) => {
                         <label className="label"> <span className="label-text">Confirm Password</span></label>
                         <input type="password" {...register("confirm", {
                             required: true
-                        })} className="input input-bordered w-full max-w-xs" />
+                        })} className="input input-bordered p-2 w-full text-black" />
                         {errors.confirm && <p className='text-red-500'>{errors.confirm.message}</p>}
                     </div>
 
@@ -154,7 +154,7 @@ const RegisterForm = ({setLoginForm}) => {
 
 
                 </form>
-                <h4>Already Have an Account? <span  className="cursor-pointer  font-extrabold" onClick={()=>setLoginForm(true)}>Sign In Now</span></h4>
+                <h4>Already Have an Account? <span  className="cursor-pointer  font-extrabold underline" onClick={()=>setLoginForm(true)}>Sign In Now</span></h4>
             </div>
 
         </div>

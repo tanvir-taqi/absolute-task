@@ -91,16 +91,16 @@ const AddTask = () => {
                         <label className="label"> <span className="label-text">Name</span></label>
                         <input type="text" {...register("taskname", {
                             required: "Task Name is Required"
-                        })} className="input input-bordered w-full max-w-xs" />
+                        })} className="input input-bordered text-black p-2 w-full max-w-xs" />
                         {errors.taskname && <p className='text-red-500'>{errors.taskname.message}</p>}
                     </div>
 
 
                     <div className="form-control w-full max-w-xs">
                         <label className="label"> <span className="label-text">Details</span></label>
-                        <input type="text" {...register("details", {
+                        <textarea  type="text" {...register("details", {
                             required: "Details is Required"
-                        })} className="input input-bordered w-full max-w-xs" />
+                        })} className="input input-bordered text-black p-2 w-full max-w-xs" />
                         {errors.details && <p className='text-red-500'>{errors.details.message}</p>}
                     </div>
 

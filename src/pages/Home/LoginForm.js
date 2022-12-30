@@ -89,7 +89,7 @@ const LoginForm = ({setLoginForm}) => {
                 <form onSubmit={handleLogin}>
                     <div className='flex flex-col my-3'>
                         <label htmlFor="email" className='font-bold'>Email</label>
-                        <input type="email" name="email" id="email" placeholder="Email" className="p-2 w-full" />
+                        <input type="email" name="email" id="email" placeholder="Email" className="p-2 w-full text-black" />
                     </div>
                     <div className='flex flex-col my-3'>
                         <div className='flex justify-between items-center'>
@@ -104,13 +104,13 @@ const LoginForm = ({setLoginForm}) => {
                                 }
                             </span>
                         </div>
-                        <input type={showPass ? 'text' : 'password'} name="password" id="password" placeholder="Password" className="p-2 w-full" />
+                        <input type={showPass ? 'text' : 'password'} name="password" id="password" placeholder="Password" className="p-2 w-full text-black" />
                     </div>
                     <p className='text-red-500 font-semibold'>{errorMsg}</p>
 
                     <input type="submit" className={`font-bold text-lg ${theme ? "bg-[#bbe3e7] ": "  bg-[#0c141f]"} py-2 px-4 rounded-3xl my-3 cursor-pointer`} value="Sign In" />
                 </form>
-                <h4>New to <strong>Absolute Tasks?</strong> <span onClick={()=>setLoginForm(false)} className="cursor-pointer  font-extrabold">Sign Up Now</span></h4>
+                <h4>New to <strong>Absolute Tasks?</strong> <span onClick={()=>setLoginForm(false)} className="cursor-pointer  font-extrabold underline">Sign Up Now</span></h4>
                 <button onClick={() => handleSocialLogin(googleProvider)} className='flex items center justify-center px-5 py-2 rounded-full my-5 bg-blue-500'> <span className='mt-1 mr-4'><FaGoogle></FaGoogle></span> Sign In With Google</button>
             </div>
 
