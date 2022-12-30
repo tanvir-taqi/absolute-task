@@ -1,6 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 
 import React, { useContext,  useState } from 'react';
+import LinkAddtask from '../../components/LinkAddtask';
 import LoadingSpinner from '../../components/LoadingSpinner';
 import { AuthContext } from '../../userContext/UserContext';
 import SingleMyTask from './SingleMyTask';
@@ -67,7 +68,9 @@ const MyTask = () => {
 
     return (
         <div className='py-10'>
+            <LinkAddtask></LinkAddtask>
             <h1 className='text-4xl font-extrabold text-center mb-12'>My Tasks</h1>
+
 
             <div>
                 {
