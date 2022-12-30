@@ -4,7 +4,7 @@ const SingleMyTask = ({task,handleCompleteTask,handleDeleteTask}) => {
     const {taskname,details,image,date,_id} = task
     const [viewDetails, setViewDetails] = useState(false)
     return (
-        <div className='w-full my-5 flex justify-center'>
+        <div className='w-full  my-5 flex justify-center'>
          
             <div className={`md:w-2/3 `}>
                 <div className='px-4 grid grid-cols-1 md:grid-cols-6 justify-center items-center md:gap-6 gap-2'>
