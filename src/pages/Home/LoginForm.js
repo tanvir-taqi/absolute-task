@@ -4,6 +4,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../userContext/UserContext';
 import { FaEye, FaEyeSlash, FaGoogle } from "react-icons/fa";
 import LoadingSpinner from '../../components/LoadingSpinner';
+import { useSelector } from 'react-redux';
 
 const LoginForm = ({setLoginForm}) => {
     const { login, setLoading, loading, socialLogin } = useContext(AuthContext);
@@ -14,6 +15,7 @@ const LoginForm = ({setLoginForm}) => {
  
     const googleProvider = new GoogleAuthProvider()
 
+    const theme = useSelector(state => state.darkToggleMode)
 
   
 
@@ -82,7 +84,7 @@ const LoginForm = ({setLoginForm}) => {
 
     return (
         <div className=" py-32 w-full flex justify-center">
-            <div className='p-10 bg-cyan-200 w-96'>
+            <div className={`p-10 ${theme ? "bg-[#89e5f0] text-[#0c141fbd]": " text-[#d8eaec] bg-[#315682]"} w-96 `}>
                 <h1 className="text-center font-bold text-2xl">Sign In</h1>
                 <form onSubmit={handleLogin}>
                     <div className='flex flex-col my-3'>
@@ -106,10 +108,10 @@ const LoginForm = ({setLoginForm}) => {
                     </div>
                     <p className='text-red-500 font-semibold'>{errorMsg}</p>
 
-                    <input type="submit" className='font-bold text-lg bg-cyan-600 py-2 px-4 rounded-3xl my-3 cursor-pointer' value="Sign In" />
+                    <input type="submit" className={`font-bold text-lg ${theme ? "bg-[#bbe3e7] ": "  bg-[#0c141f]"} py-2 px-4 rounded-3xl my-3 cursor-pointer`} value="Sign In" />
                 </form>
-                <h4>New to <strong>Absolute Tasks?</strong> <span onClick={()=>setLoginForm(false)}>Sign Up Now</span></h4>
-                <button onClick={() => handleSocialLogin(googleProvider)} className='flex items center justify-center px-5 py-2 rounded-full my-5 bg-cyan-600'> <span className='mt-1 mr-4'><FaGoogle></FaGoogle></span> Sign In With Google</button>
+                <h4>New to <strong>Absolute Tasks?</strong> <span onClick={()=>setLoginForm(false)} className="cursor-pointer  font-extrabold">Sign Up Now</span></h4>
+                <button onClick={() => handleSocialLogin(googleProvider)} className='flex items center justify-center px-5 py-2 rounded-full my-5 bg-blue-500'> <span className='mt-1 mr-4'><FaGoogle></FaGoogle></span> Sign In With Google</button>
             </div>
 
         </div>

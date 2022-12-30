@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { useSelector } from 'react-redux';
 import { useLocation, useNavigate } from 'react-router-dom';
 import LoadingSpinner from '../../components/LoadingSpinner';
 import { AuthContext } from '../../userContext/UserContext';
@@ -11,6 +12,8 @@ const RegisterForm = ({setLoginForm}) => {
 
     const navigate = useNavigate();
     const location = useLocation();
+    const theme = useSelector(state => state.darkToggleMode)
+
 
 
     const from = location.state?.from?.pathname || "/mytask";
@@ -97,7 +100,7 @@ const RegisterForm = ({setLoginForm}) => {
     }
     return (
         <div className=" py-32 w-full flex justify-center">
-            <div className='p-10 bg-cyan-200 w-96'>
+            <div className={`p-10 ${theme ? "bg-[#89e5f0] text-[#0c141fbd]": " text-[#d8eaec] bg-[#315682]"} w-96`}>
                 <h1 className="text-center font-bold text-2xl">Sign Up</h1>
                 <form onSubmit={handleSubmit(handleSignUp)}>
 
@@ -147,11 +150,11 @@ const RegisterForm = ({setLoginForm}) => {
 
                     <p className='text-red-500 font-semibold'>{errorMsg}</p>
 
-                    <input className='btn  mt-4 bg-cyan-700' value="Sign Up" type="submit" />
+                    <input className={`btn  py-2 px-4 rounded-3xl my-3 cursor-pointer ${theme ? "bg-[#bbe3e7] ": "  bg-[#0c141f]"}`} value="Sign Up" type="submit" />
 
 
                 </form>
-                <h4>Already Have an Account? <span onClick={()=>setLoginForm(true)}>Sign In Now</span></h4>
+                <h4>Already Have an Account? <span  className="cursor-pointer  font-extrabold" onClick={()=>setLoginForm(true)}>Sign In Now</span></h4>
             </div>
 
         </div>

@@ -1,6 +1,7 @@
 import { format } from 'date-fns';
 import React, { useContext, useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { useSelector } from 'react-redux';
 import { useLocation, useNavigate } from 'react-router-dom';
 import LoadingSpinner from '../../components/LoadingSpinner';
 import { AuthContext } from '../../userContext/UserContext';
@@ -10,6 +11,8 @@ const AddTask = () => {
     const [errorMsg, setErrorMsg] = useState('')
     const [addtaskLoader, setAddtaskLoader] = useState(false)
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
+    const theme = useSelector(state => state.darkToggleMode)
+
 
     const navigate = useNavigate();
 
@@ -71,7 +74,7 @@ const AddTask = () => {
     }
     return (
         <div className=" py-32 w-full flex justify-center">
-            <div className='p-10 bg-cyan-200 '>
+            <div className={`p-10 ${theme ? "bg-[#89e5f0] text-[#0c141fbd]": " text-[#d8eaec] bg-[#315682]"} `}>
                 <h1 className="text-center font-bold text-2xl">Add Task</h1>
                 <form onSubmit={handleSubmit(handleaddTask)}>
 
@@ -104,7 +107,7 @@ const AddTask = () => {
 
                     <p className='text-red-500 font-semibold'>{errorMsg}</p>
 
-                    <input className='btn  mt-4 bg-cyan-700' value="Add Task" type="submit" />
+                    <input className={`font-semibold text-lg py-2 px-4 my-4 cursor-pointer rounded  ${theme ? "bg-[#bbe3e7] ": "  bg-[#0c141f]"}`} value="Add Task" type="submit" />
 
 
                 </form>
