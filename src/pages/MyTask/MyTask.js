@@ -18,9 +18,19 @@ const MyTask = () => {
             const data = await res.json();
             return data
         }
-
     })
 
+    const handleDeleteTask = (id)=>{
+        fetch(`https://absolute-task-server.vercel.app/compeletedtasks/${id}`,{
+            method: 'DELETE',
+        })
+        .then(res=>res.json())
+        .then(data =>{
+            console.log(data);
+            refetch();
+        })
+
+    }
 
     const handleCompleteTask = (taskID) => {
             setTaskLoading(true)
@@ -70,6 +80,7 @@ const MyTask = () => {
                                     key={task._id}
                                     task={task}
                                     handleCompleteTask={handleCompleteTask}
+                                    handleDeleteTask={handleDeleteTask}
                                 ></SingleMyTask>)
 
                             }
