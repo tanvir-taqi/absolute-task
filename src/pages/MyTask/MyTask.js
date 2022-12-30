@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
-import axios from 'axios';
-import React, { useContext, useEffect, useState } from 'react';
+
+import React, { useContext,  useState } from 'react';
 import LoadingSpinner from '../../components/LoadingSpinner';
 import { AuthContext } from '../../userContext/UserContext';
 import SingleMyTask from './SingleMyTask';

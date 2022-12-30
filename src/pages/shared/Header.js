@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { AuthContext } from '../../userContext/UserContext';
 import { BiAlignMiddle, BiUserCircle } from "react-icons/bi";
 

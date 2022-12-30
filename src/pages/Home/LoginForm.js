@@ -11,11 +11,11 @@ const LoginForm = ({setLoginForm}) => {
     const [errorMsg, setErrorMsg] = useState('')
 
     const navigate = useNavigate();
-    const location = useLocation();
+ 
     const googleProvider = new GoogleAuthProvider()
 
 
-    const from = location.state?.from?.pathname || "/mytask";
+  
 
     const handleLogin = event => {
         event.preventDefault();
@@ -27,7 +27,7 @@ const LoginForm = ({setLoginForm}) => {
             .then(result => {
                 const user = result.user;
                 setLoading(false)
-
+                console.log(user);
                 navigate("/mytask");
             })
             .catch(error => {
